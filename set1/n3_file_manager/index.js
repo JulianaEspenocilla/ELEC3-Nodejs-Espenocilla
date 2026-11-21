@@ -40,23 +40,7 @@ switch (command) {
         }
         break;
 
-    case "list":
-        const files = fs.readdirSync(path.join(__dirname, "files"));
-
-        files.forEach(file => {
-            const fullPath = path.join(__dirname, "files", file);
-
-            console.log("\n------------------");
-            console.log("Full Path:", fullPath);
-            console.log("File Name:", path.basename(file));
-            console.log("Extension:", path.extname(file));
-
-            const data = fs.readFileSync(fullPath, "utf8");
-            console.log("Contents:");
-            console.log(data);
-        });
-
-        break;
+   
 
     default:
         console.log("Invalid command.");
